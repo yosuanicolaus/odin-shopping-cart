@@ -16,14 +16,12 @@ const useCart = () => {
       }
       setCart((cart) => newCart);
     } else {
-      setSeen((seen) => new Set([...seen, ...new Set([name])]));
-      setCart((cart) =>
-        cart.concat([{ name: name, price: price, quantity: 1 }])
-      );
+      const newSeen = new Set([name]);
+      const newObj = { name: name, price: price, quantity: 1 };
+      setSeen((seen) => new Set([...seen, ...newSeen]));
+      setCart((cart) => cart.concat([newObj]));
     }
     setSize((size) => size + 1);
-    console.log(cart);
-    console.log(seen);
   };
 
   return [cart, add, size];
