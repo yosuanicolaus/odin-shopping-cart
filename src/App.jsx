@@ -5,16 +5,18 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import CartPage from "./pages/CartPage";
+import useCart from "./components/Cart";
 
 function App() {
+  const [cart, add, size] = useCart();
   return (
     <div className="min-vh-100 d-flex flex-column">
       <Router>
-        <Navigate />
+        <Navigate cartSize={size} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/shop" element={<Shop cart={cart} add={add} />} />
+          <Route path="/cart" element={<CartPage cart={cart} />} />
         </Routes>
         <Footer />
       </Router>
