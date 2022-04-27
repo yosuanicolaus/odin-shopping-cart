@@ -8,15 +8,17 @@ import CartPage from "./pages/CartPage";
 
 function App() {
   return (
-    <Router>
-      <Navigate />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<CartPage />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="min-vh-100 d-flex flex-column">
+      <Router>
+        <Navigate />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
