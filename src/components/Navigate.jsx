@@ -12,7 +12,7 @@ import {
 function Navigate() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle = () => setIsOpen((open) => !open);
 
   return (
     <Navbar expand="md" dark color="primary">
@@ -26,12 +26,12 @@ function Navigate() {
             </Link>
           </NavItem>
           <NavItem>
-            <Link to={"/"} className="nav-link">
+            <Link to={"/shop"} className="nav-link">
               Shop
             </Link>
           </NavItem>
           <NavItem>
-            <Link to={"/"} className="nav-link">
+            <Link to={"/cart"} className="nav-link">
               Cart
             </Link>
           </NavItem>
