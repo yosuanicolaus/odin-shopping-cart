@@ -1,3 +1,5 @@
+import Cart from "./Cart";
+
 function ProductCard({ name, url, price }) {
   return (
     <div className="text-center border col-md-6 p-4">
@@ -10,7 +12,12 @@ function ProductCard({ name, url, price }) {
       />
       <h4>{name}</h4>
       <pre>{price}</pre>
-      <button className="btn btn-primary btn-sm shadow">Add to Cart</button>
+      <button
+        className="btn btn-primary btn-sm shadow"
+        onClick={() => Cart.add(name, price)}
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }
