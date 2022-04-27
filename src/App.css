@@ -1,0 +1,7 @@
+.nav-link {
+  color: rgba(0, 0, 0, 0.514);
+}
+
+.nav-link:hover {
+  color: black;
+}
