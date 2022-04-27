@@ -1,6 +1,4 @@
-import Cart from "./Cart";
-
-function ProductCard({ name, url, price }) {
+function ProductCard({ name, url, price, addToCart }) {
   return (
     <div className="text-center border col-md-6 p-4">
       <img
@@ -13,8 +11,8 @@ function ProductCard({ name, url, price }) {
       <h4>{name}</h4>
       <pre>{price}</pre>
       <button
-        className="btn btn-primary btn-sm shadow"
-        onClick={() => Cart.add(name, price)}
+        className="btn btn-outline-primary btn-sm shadow"
+        onClick={() => addToCart(name, price)}
       >
         Add to Cart
       </button>
