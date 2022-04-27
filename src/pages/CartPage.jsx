@@ -1,7 +1,9 @@
 import Cart from "../components/Cart";
+import Payment from "../components/Payment";
 import uniqid from "uniqid";
 
 function CartPage() {
+  const grandTotal = getGrandTotal(Cart.cart);
   return (
     <div className="text-center">
       <div className="h2 mt-3">Your Cart</div>
@@ -13,19 +15,18 @@ function CartPage() {
           <div className="col">Total</div>
         </div>
         {Cart.cart.map(({ name, price, quantity }) => {
+          const totalPrice = getTotalPrice(price, quantity);
           return (
             <div key={uniqid()} className="shadow mb-4 p-3 row">
               <div className="col-lg-8 col text-start">{name}</div>
               <div className="col">{price}</div>
               <div className="col">{quantity}</div>
-              <div className="col">{getTotalPrice(price, quantity)}</div>
+              <div className="col">{totalPrice}</div>
             </div>
           );
         })}
-        <h4 className="mt-3">Grand Total : {getGrandTotal(Cart.cart)}</h4>
-        <button className="btn btn-outline-primary rounded-3 m-3">
-          Proceed to Payment
-        </button>
+        <h4 className="mt-3">Grand Total : {grandTotal}</h4>
+        <Payment grandTotal={grandTotal} />
       </div>
     </div>
   );
