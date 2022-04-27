@@ -1,7 +1,9 @@
 function Footer() {
   return (
     <>
-      <div className="lead">footer here</div>
+      <div className="bg-black text-center lead">
+        copyright © yosuanicolaus 2022
+      </div>
     </>
   );
 }
