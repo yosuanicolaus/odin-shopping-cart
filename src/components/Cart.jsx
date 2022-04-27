@@ -1,25 +1,32 @@
-const Cart = (() => {
-  const cart = [];
-  const seen = new Set();
+import { useState } from "react";
+
+const useCart = () => {
+  const [cart, setCart] = useState([]);
+  const [size, setSize] = useState(0);
+  const [seen, setSeen] = useState(new Set());
 
   const add = (name, price) => {
     if (seen.has(name)) {
-      for (let i = 0; i < cart.length; i++) {
-        if (cart[i].name === name) {
-          cart[i].quantity += 1;
+      const newCart = [...cart];
+      for (let i = 0; i < newCart.length; i++) {
+        if (newCart[i].name === name) {
+          newCart[i].quantity += 1;
           break;
         }
       }
+      setCart((cart) => newCart);
     } else {
-      seen.add(name);
-      cart.push({ name: name, price: price, quantity: 1 });
+      setSeen((seen) => new Set([...seen, ...new Set([name])]));
+      setCart((cart) =>
+        cart.concat([{ name: name, price: price, quantity: 1 }])
+      );
     }
+    setSize((size) => size + 1);
+    console.log(cart);
+    console.log(seen);
   };
 
-  return {
-    cart,
-    add,
-  };
-})();
+  return [cart, add, size];
+};
 
-export default Cart;
+export default useCart;
