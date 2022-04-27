@@ -4,7 +4,7 @@ import uniqid from "uniqid";
 
 function Shop({ cart, add }) {
   return (
-    <div className="container">
+    <div className="container-lg">
       <div className="row">
         {ProductList.map(({ name, url, price }) => (
           <ProductCard

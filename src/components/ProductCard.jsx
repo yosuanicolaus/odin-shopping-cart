@@ -1,6 +1,6 @@
 function ProductCard({ name, url, price, addToCart }) {
   return (
-    <div className="text-center border col-md-6 p-4">
+    <div className="text-center border col-lg-6 p-4">
       <img
         src={url}
         alt={name}
