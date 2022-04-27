@@ -4,8 +4,8 @@ import ProductCard from "../components/ProductCard";
 function Shop() {
   console.log(ProductList);
   return (
-    <div>
-      <div>
+    <div className="container">
+      <div className="row">
         {ProductList.map(({ name, url }) => (
           <ProductCard name={name} url={url} />
         ))}

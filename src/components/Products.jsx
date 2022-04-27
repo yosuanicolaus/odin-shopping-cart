@@ -1,9 +1,5 @@
 const ProductList = [
   {
-    name: "Mansion",
-    url: "https://images.unsplash.com/photo-1600954268251-282b4c143480?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
-  },
-  {
     name: "Simple Watch",
     url: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80",
   },
@@ -16,7 +12,7 @@ const ProductList = [
     url: "https://images.unsplash.com/photo-1585059895926-5e3be4d7c385?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
-    name: "CheapSuit",
+    name: "Cheap Suit",
     url: "https://images.unsplash.com/photo-1497339100210-9e87df79c218?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
@@ -40,12 +36,16 @@ const ProductList = [
     url: "https://images.unsplash.com/photo-1555652736-e92021d28a10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   },
   {
+    name: "Apple Pack",
+    url: "https://images.unsplash.com/photo-1588609460031-22705bc49db0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80",
+  },
+  {
     name: "Limousine",
     url: "https://images.unsplash.com/photo-1639497366184-abc2260cca65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=692&q=80",
   },
   {
-    name: "Apple Pack",
-    url: "https://images.unsplash.com/photo-1588609460031-22705bc49db0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80",
+    name: "Mansion",
+    url: "https://images.unsplash.com/photo-1600954268251-282b4c143480?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80",
   },
 ];
 
