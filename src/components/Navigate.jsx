@@ -9,18 +9,18 @@ import {
   NavItem,
 } from "reactstrap";
 
-function Navigate() {
+function Navigate({ cartSize }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen((open) => !open);
 
   return (
-    <Navbar expand="md" dark color="primary">
+    <Navbar expand="md" dark color="primary" className="sticky-top">
       <NavbarBrand>Elegant</NavbarBrand>
       <NavbarToggler onClick={toggle} className="shadow" />
       <Collapse isOpen={isOpen} navbar>
-        <Nav navbar className="w-100">
-          <NavItem className="ms-auto">
+        <Nav navbar className="w-100 justify-content-end">
+          <NavItem>
             <Link to={"/"} className="nav-link">
               Home
             </Link>
@@ -32,7 +32,7 @@ function Navigate() {
           </NavItem>
           <NavItem>
             <Link to={"/cart"} className="nav-link">
-              Cart
+              Cart <div className="badge">{cartSize}</div>
             </Link>
           </NavItem>
         </Nav>
