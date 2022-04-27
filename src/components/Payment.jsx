@@ -22,16 +22,8 @@ function Payment({ grandTotal }) {
           account. We will deliver the items to your house in a second.
           <hr />
           Just kidding. Thank you for browsing around my shopping website
-          project.
-          <br />
-          This Project was made with React.
-          <br />
-          Themed using bootswatch Lux template.
-          <br />
-          Bootstrap components from reactstrap.
-          <br />
-          Photos from Unsplash
-          <br />
+          project. This Project was made with React. Themed using bootswatch Lux
+          template. Bootstrap components from reactstrap. Photos from Unsplash
           copyright © yosuanicolaus 2022
           <hr />
           <div className="text-center mb-2">Stay elegant.</div>
