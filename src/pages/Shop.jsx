@@ -6,8 +6,8 @@ function Shop() {
   return (
     <div className="container">
       <div className="row">
-        {ProductList.map(({ name, url }) => (
-          <ProductCard name={name} url={url} />
+        {ProductList.map(({ name, url, price }) => (
+          <ProductCard name={name} url={url} price={price} />
         ))}
       </div>
     </div>
