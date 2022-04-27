@@ -1,23 +1,16 @@
-import {
-  mansion,
-  simpleWatch,
-  glasses,
-  heels,
-  cheapSuit,
-  suit1,
-  suit2,
-  oldCar,
-  gem,
-  blackCar,
-  limousine,
-  applePack,
-} from "./Products";
+import ProductList from "../components/Products";
+import ProductCard from "../components/ProductCard";
 
 function Shop() {
+  console.log(ProductList);
   return (
-    <>
-      <div className="display-3">Shop Page</div>
-    </>
+    <div>
+      <div>
+        {ProductList.map(({ name, url }) => (
+          <ProductCard name={name} url={url} />
+        ))}
+      </div>
+    </div>
   );
 }
 
