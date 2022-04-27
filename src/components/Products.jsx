@@ -37,7 +37,7 @@ const ProductList = [
   {
     name: "Gem",
     url: "https://images.unsplash.com/photo-1583937443566-6fe1a1c6e400?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    price: "49,999.00$",
+    price: "$49,999.00",
   },
   {
     name: "Black Car",
