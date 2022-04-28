@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import CartPage from "./pages/CartPage";
+import NotFound from "./pages/NotFound";
 import useCart from "./components/Cart";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             path="/cart"
             element={<CartPage cart={cart} reset={reset} />}
           />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
