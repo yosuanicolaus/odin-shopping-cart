@@ -10,7 +10,7 @@ function Home() {
   };
 
   return (
-    <div className="d-flex">
+    <div className="d-flex" id="Home">
       <div className="flex-grow-1 d-flex justify-content-center align-items-center flex-column">
         <div className="display-1">Elegant</div>
         <div className="lead mb-3">Upgrade Life, Live Expensively</div>
