@@ -32,7 +32,12 @@ function Navigate({ cartSize }) {
           </NavItem>
           <NavItem>
             <Link to={"/cart"} className="nav-link">
-              Cart <div className="badge">{cartSize}</div>
+              Cart{" "}
+              {cartSize > 0 && (
+                <div className="badge badge-pill bg-opacity-75 bg-secondary">
+                  {cartSize}
+                </div>
+              )}
             </Link>
           </NavItem>
         </Nav>
