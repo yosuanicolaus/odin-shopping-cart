@@ -26,3 +26,10 @@
     color: black;
   }
 }
+
+@media only screen and (max-width: 440px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
