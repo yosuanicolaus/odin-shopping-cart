@@ -24,7 +24,13 @@ const useCart = () => {
     setSize((size) => size + 1);
   };
 
-  return [cart, add, size];
+  const reset = () => {
+    setCart(() => []);
+    setSize(() => 0);
+    setSeen(() => new Set());
+  };
+
+  return [cart, size, add, reset];
 };
 
 export default useCart;

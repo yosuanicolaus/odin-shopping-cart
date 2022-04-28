@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import { useNavigate } from "react-router-dom";
 
-function Payment({ grandTotal }) {
+function Payment({ grandTotal, reset }) {
   const [open, setOpen] = useState();
   const navigate = useNavigate();
-  const backToHome = () => navigate("/");
+  const backToHome = () => {
+    navigate("/");
+    reset();
+  };
 
   return (
     <>

@@ -1,7 +1,7 @@
 import Payment from "../components/Payment";
 import uniqid from "uniqid";
 
-function CartPage({ cart }) {
+function CartPage({ cart, reset }) {
   const grandTotal = getGrandTotal(cart);
   return (
     <div className="text-center">
@@ -25,7 +25,7 @@ function CartPage({ cart }) {
           );
         })}
         <h4 className="mt-3">Grand Total : {grandTotal}</h4>
-        <Payment grandTotal={grandTotal} />
+        <Payment grandTotal={grandTotal} reset={reset} />
       </div>
     </div>
   );

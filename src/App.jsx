@@ -8,7 +8,7 @@ import CartPage from "./pages/CartPage";
 import useCart from "./components/Cart";
 
 function App() {
-  const [cart, add, size] = useCart();
+  const [cart, size, add, reset] = useCart();
   return (
     <div className="min-vh-100 d-flex flex-column">
       <Router>
@@ -16,7 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop cart={cart} add={add} />} />
-          <Route path="/cart" element={<CartPage cart={cart} />} />
+          <Route
+            path="/cart"
+            element={<CartPage cart={cart} reset={reset} />}
+          />
         </Routes>
         <Footer />
       </Router>
