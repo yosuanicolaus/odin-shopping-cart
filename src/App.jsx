@@ -12,7 +12,7 @@ function App() {
   const [cart, size, add, reset] = useCart();
   return (
     <div className="min-vh-100 d-flex flex-column">
-      <Router basename="shopping-cart">
+      <Router basename="odin-shopping-cart">
         <Navigate cartSize={size} />
         <Routes>
           <Route path="/" element={<Home />} />
